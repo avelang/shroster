@@ -89,38 +89,59 @@ let rosterData = [
 // Load data from Firebase
 async function loadSavedData() {
     try {
+        console.log('Loading data from Firebase...');
         const snapshot = await db.collection('roster').get();
         if (!snapshot.empty) {
+            console.log('Data loaded successfully');
             rosterData = snapshot.docs.map(doc => doc.data());
         } else {
-            // If no data exists, initialize with default data
+            console.log('No data found, initializing default data...');
             await initializeDefaultData();
         }
     } catch (error) {
         console.error("Error loading data:", error);
+        console.error("Error details:", {
+            code: error.code,
+            message: error.message,
+            stack: error.stack
+        });
     }
 }
 
 // Initialize default data in Firebase
 async function initializeDefaultData() {
     try {
+        console.log('Initializing default data...');
         const batch = db.batch();
         rosterData.forEach((member, index) => {
             const docRef = db.collection('roster').doc(`member${index}`);
             batch.set(docRef, member);
         });
         await batch.commit();
+        console.log('Default data initialized successfully');
     } catch (error) {
         console.error("Error initializing data:", error);
+        console.error("Error details:", {
+            code: error.code,
+            message: error.message,
+            stack: error.stack
+        });
     }
 }
 
 // Save member data to Firebase
 async function saveMemberData(member, index) {
     try {
+        console.log('Saving member data...', { member, index });
         await db.collection('roster').doc(`member${index}`).update(member);
+        console.log('Member data saved successfully');
     } catch (error) {
         console.error("Error saving member data:", error);
+        console.error("Error details:", {
+            code: error.code,
+            message: error.message,
+            stack: error.stack
+        });
     }
 }
 
@@ -369,5 +390,31 @@ applyFiltersBtn.addEventListener('click', applyFilters);
 
 resetFiltersBtn.addEventListener('click', resetFilters);
 
-// Initialize the roster when the page loads
-document.addEventListener('DOMContentLoaded', initializeRoster); 
+// Dark mode functionality
+function initDarkMode() {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (prefersDarkScheme.matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    
+    // Toggle dark mode
+    darkModeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
+
+// Initialize dark mode when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    initDarkMode();
+    initializeRoster();
+}); 
