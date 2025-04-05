@@ -1,5 +1,5 @@
 // Class roster data with additional details
-const rosterData = [
+let rosterData = [
     { name: "Abdul Qayyoom Sait M R", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
     { name: "Abey Velangadan", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
     { name: "Abhilash Augustine", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
@@ -86,6 +86,44 @@ const rosterData = [
     { name: "Vibin M D", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" }
 ];
 
+// Load data from Firebase
+async function loadSavedData() {
+    try {
+        const snapshot = await db.collection('roster').get();
+        if (!snapshot.empty) {
+            rosterData = snapshot.docs.map(doc => doc.data());
+        } else {
+            // If no data exists, initialize with default data
+            await initializeDefaultData();
+        }
+    } catch (error) {
+        console.error("Error loading data:", error);
+    }
+}
+
+// Initialize default data in Firebase
+async function initializeDefaultData() {
+    try {
+        const batch = db.batch();
+        rosterData.forEach((member, index) => {
+            const docRef = db.collection('roster').doc(`member${index}`);
+            batch.set(docRef, member);
+        });
+        await batch.commit();
+    } catch (error) {
+        console.error("Error initializing data:", error);
+    }
+}
+
+// Save member data to Firebase
+async function saveMemberData(member, index) {
+    try {
+        await db.collection('roster').doc(`member${index}`).update(member);
+    } catch (error) {
+        console.error("Error saving member data:", error);
+    }
+}
+
 // DOM Elements
 const rosterList = document.getElementById('roster-list');
 const searchInput = document.getElementById('roster-search-input');
@@ -104,7 +142,8 @@ let currentSort = 'asc';
 let filteredRoster = [...rosterData];
 
 // Initialize the roster
-function initializeRoster() {
+async function initializeRoster() {
+    await loadSavedData(); // Load saved data first
     displayRoster(rosterData);
 }
 
@@ -279,7 +318,7 @@ function openEditModal(index) {
     });
     
     // Form submit event
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         // Update member data
@@ -289,6 +328,9 @@ function openEditModal(index) {
         member.contactedBy = document.getElementById('contactedBy').value;
         member.phone = document.getElementById('phone').value;
         member.availability = document.getElementById('availability').value;
+        
+        // Save changes to Firebase
+        await saveMemberData(member, index);
         
         // Close modal
         document.body.removeChild(modal);
