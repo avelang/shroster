@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Roster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Class Roster Section -->
+        <div id="roster" class="section-title">
+            <h2>Class Roster</h2>
+        </div>
+        <div class="class-roster">
+            <div class="roster-search">
+                <input type="text" placeholder="Search for classmates..." id="roster-search-input">
+                <button id="search-btn">Search</button>
+            </div>
+            
+            <!-- Filter Controls -->
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="gender-filter">Gender:</label>
+                    <select id="gender-filter">
+                        <option value="">All</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="location-filter">Location:</label>
+                    <select id="location-filter">
+                        <option value="">All</option>
+                        <option value="Overseas">Overseas</option>
+                        <option value="India">India</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Kochi">Kochi</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="contacted-filter">Contacted:</label>
+                    <select id="contacted-filter">
+                        <option value="">All</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="availability-filter">Availability:</label>
+                    <select id="availability-filter">
+                        <option value="">All</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Maybe">Maybe</option>
+                    </select>
+                </div>
+                
+                <button id="apply-filters-btn">Apply Filters</button>
+                <button id="reset-filters-btn">Reset</button>
+            </div>
+            
+            <div class="sort-controls">
+                <button class="sort-btn active" data-sort="asc">A-Z</button>
+                <button class="sort-btn" data-sort="desc">Z-A</button>
+            </div>
+            <div class="roster-list" id="roster-list">
+                <!-- Roster items will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
