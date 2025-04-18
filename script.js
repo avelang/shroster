@@ -1,103 +1,38 @@
-// Class roster data with additional details
-let rosterData = [
-    { name: "Abdul Qayyoom Sait M R", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Abey Velangadan", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Abhilash Augustine", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Abilash K", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Alfred Thomas", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Aneesh Michael", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Anju Babu", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Arun A Abraham", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Arun Sidhan", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Asha Kurian", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Ashitha Mathew", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Aswathy Maria Joseph", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Bastin Tijo Thomas", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Binu Jose C J", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Boby K A", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Brilsa Raj", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Ceethu Antony Chernoth", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Cija Augustus", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Cijo George", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Deepak Menon", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Deepak S", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Deepthy Jose", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Dileesh Jostin", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Elizabeth Kuriala", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Geetha Lekshmi G", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "George Regin K J", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "George Thomas", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "George Thomas M", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Girish S", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jagadeesh Kumar", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jayadevan A", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jerry J Vettamvely", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jimmy Vibu James", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jins Thomas", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jisha K", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jiss M Kumar", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "John E George", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jomy Joseph", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Jortin Varghese", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Kavitha Mohanraj", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Laly T K", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Liza Jolly", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Martin Varghese", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Minu Jose", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Mohamed Fazal K A", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Neetha Joseph T", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Neetha Varghese K", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Nobin Thomas", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Prasanth S", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Ratheesh K R", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Remya Devasia", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Roshni Pius", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Rosmy Jose Valavi", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sajin S", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sameer Sait A", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sandeep K Vasudevan", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sangeetha P Prabhu", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sanil Kumar M V", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sarath S P", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Satheesh M T", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Shani M S", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sharath Chandran B", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sherry Philip", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Shibu Varghese", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Shinu B Firoz", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Shone Jacob", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Shymon S P", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sonnia Baby", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Soumya Sunny", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sreekumar M", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sreenath M", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Srikkanth S Bose", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Srinivas E Kamath", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Suja T D", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sujith Jacob", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sumithra P", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sunil Samuel", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Sunitha E V", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Syam Kumar P", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Teena Mary Mohan", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Thomas George", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Toby Joseph Pulickal", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Tony Benny", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
-    { name: "Vibin M D", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" }
-];
+// DOM Elements
+const rosterList = document.getElementById('roster-list');
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById('search-btn');
+const sortButtons = document.querySelectorAll('.sort-btn');
+const genderFilter = document.getElementById('gender-filter');
+const locationFilter = document.getElementById('location-filter');
+const contactedFilter = document.getElementById('contacted-filter');
+const availabilityFilter = document.getElementById('availability-filter');
+const applyFiltersBtn = document.getElementById('apply-filters');
+const resetFiltersBtn = document.getElementById('reset-filters');
 
-// Load data from Firebase
+// Remove the rosterData array
+// let rosterData = [ ... ]; // Remove this array
+
+// Load saved data from Firebase
 async function loadSavedData() {
     try {
-        console.log('Loading data from Firebase...');
+        console.log('Loading saved data...');
         const snapshot = await db.collection('roster').get();
-        if (!snapshot.empty) {
-            console.log('Data loaded successfully');
-            rosterData = snapshot.docs.map(doc => doc.data());
-        } else {
-            console.log('No data found, initializing default data...');
-            await initializeDefaultData();
+        console.log('Firestore snapshot:', snapshot);
+        
+        if (snapshot.empty) {
+            console.log('No data found in Firestore');
+            return [];
         }
+        
+        const members = [];
+        snapshot.forEach(doc => {
+            const data = doc.data();
+            console.log('Document data:', doc.id, data);
+            members.push({ ...data, id: doc.id });
+        });
+        console.log('Data loaded successfully:', members.length, 'members');
+        return members;
     } catch (error) {
         console.error("Error loading data:", error);
         console.error("Error details:", {
@@ -105,6 +40,7 @@ async function loadSavedData() {
             message: error.message,
             stack: error.stack
         });
+        return [];
     }
 }
 
@@ -113,10 +49,22 @@ async function initializeDefaultData() {
     try {
         console.log('Initializing default data...');
         const batch = db.batch();
-        rosterData.forEach((member, index) => {
-            const docRef = db.collection('roster').doc(`member${index}`);
-            batch.set(docRef, member);
+        const timestamp = Date.now();
+        
+        const defaultMembers = [
+            { name: "Abdul Qayyoom Sait M R", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
+            { name: "Abey Velangadan", gender: "", location: "", contacted: "", contactedBy: "", phone: "", availability: "" },
+            // ... rest of the default members ...
+        ];
+        
+        defaultMembers.forEach((member, index) => {
+            const uniqueId = `member_${timestamp}_${Math.random().toString(36).substr(2, 9)}`;
+            const docRef = db.collection('roster').doc(uniqueId);
+            const memberWithId = { ...member, id: uniqueId };
+            console.log('Creating document:', uniqueId, memberWithId);
+            batch.set(docRef, memberWithId);
         });
+        
         await batch.commit();
         console.log('Default data initialized successfully');
     } catch (error) {
@@ -129,78 +77,79 @@ async function initializeDefaultData() {
     }
 }
 
-// Save member data to Firebase
-async function saveMemberData(member, index) {
+// Display roster items
+async function displayRoster() {
     try {
-        console.log('Saving member data...', { member, index });
-        await db.collection('roster').doc(`member${index}`).update(member);
-        console.log('Member data saved successfully');
-    } catch (error) {
-        console.error("Error saving member data:", error);
-        console.error("Error details:", {
-            code: error.code,
-            message: error.message,
-            stack: error.stack
+        console.log('Displaying roster items...');
+        const members = await loadSavedData();
+        console.log('Members to display:', members);
+        
+        rosterList.innerHTML = '';
+        if (!members || members.length === 0) {
+            console.log('No members to display');
+            return;
+        }
+        
+        members.forEach(member => {
+            if (!member.id) {
+                console.error('Member missing ID:', member);
+                return;
+            }
+            const div = document.createElement('div');
+            div.className = 'roster-item';
+            div.textContent = member.name;
+            div.addEventListener('click', () => {
+                console.log('Opening edit modal for member:', member.id, member.name);
+                openEditModal(member.id);
+            });
+            rosterList.appendChild(div);
         });
+    } catch (error) {
+        console.error('Error displaying roster:', error);
     }
 }
 
-// DOM Elements
-const rosterList = document.getElementById('roster-list');
-const searchInput = document.getElementById('roster-search-input');
-const searchBtn = document.getElementById('search-btn');
-const sortButtons = document.querySelectorAll('.sort-btn');
-const applyFiltersBtn = document.getElementById('apply-filters-btn');
-const resetFiltersBtn = document.getElementById('reset-filters-btn');
-
-// Filter elements
-const genderFilter = document.getElementById('gender-filter');
-const locationFilter = document.getElementById('location-filter');
-const contactedFilter = document.getElementById('contacted-filter');
-const availabilityFilter = document.getElementById('availability-filter');
-
-let currentSort = 'asc';
-let filteredRoster = [...rosterData];
-
-// Initialize the roster
-async function initializeRoster() {
-    await loadSavedData(); // Load saved data first
-    displayRoster(rosterData);
+// Search functionality
+async function searchRoster(query) {
+    query = query.toLowerCase();
+    const members = await loadSavedData();
+    const filteredMembers = members.filter(member => 
+        member.name.toLowerCase().includes(query)
+    );
+    displayFilteredRoster(filteredMembers);
 }
 
-// Display roster items
-function displayRoster(items) {
+// Display filtered roster items
+function displayFilteredRoster(members) {
+    console.log('Displaying filtered roster items:', members);
     rosterList.innerHTML = '';
-    items.forEach((member, index) => {
+    
+    members.forEach(member => {
+        if (!member.id) {
+            console.error('Member missing ID:', member);
+            return;
+        }
         const div = document.createElement('div');
         div.className = 'roster-item';
         div.textContent = member.name;
-        div.dataset.index = index;
-        div.addEventListener('click', () => openEditModal(index));
+        div.addEventListener('click', () => {
+            console.log('Opening edit modal for member:', member.id, member.name);
+            openEditModal(member.id);
+        });
         rosterList.appendChild(div);
     });
 }
 
-// Search functionality
-function searchRoster(query) {
-    query = query.toLowerCase();
-    filteredRoster = rosterData.filter(member => 
-        member.name.toLowerCase().includes(query)
-    );
-    applyFilters();
-}
-
 // Apply all filters
-function applyFilters() {
+async function applyFilters() {
     const genderValue = genderFilter.value;
     const locationValue = locationFilter.value;
     const contactedValue = contactedFilter.value;
     const availabilityValue = availabilityFilter.value;
     
-    // Start with the current filtered roster (from search)
-    let result = [...filteredRoster];
+    const members = await loadSavedData();
+    let result = [...members];
     
-    // Apply each filter if it has a value
     if (genderValue) {
         result = result.filter(member => member.gender === genderValue);
     }
@@ -217,178 +166,75 @@ function applyFilters() {
         result = result.filter(member => member.availability === availabilityValue);
     }
     
-    // Sort the filtered results
-    sortRoster(currentSort, result);
+    displayFilteredRoster(result);
 }
 
 // Reset all filters
-function resetFilters() {
+async function resetFilters() {
     genderFilter.value = '';
     locationFilter.value = '';
     contactedFilter.value = '';
     availabilityFilter.value = '';
     
-    // Reset to original data
-    filteredRoster = [...rosterData];
-    sortRoster(currentSort);
+    await displayRoster();
 }
 
 // Sort functionality
-function sortRoster(direction, dataToSort = filteredRoster) {
-    filteredRoster = dataToSort.sort((a, b) => {
+function sortRoster(direction, members) {
+    const sortedMembers = [...members].sort((a, b) => {
         if (direction === 'asc') {
             return a.name.localeCompare(b.name);
         } else {
             return b.name.localeCompare(a.name);
         }
     });
-    displayRoster(filteredRoster);
+    displayFilteredRoster(sortedMembers);
 }
 
-// Create and open edit modal
-function openEditModal(index) {
-    const member = rosterData[index];
-    
-    // Create modal
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.id = 'edit-modal';
-    
-    // Create modal content
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Edit Member Details</h2>
-            <h3>${member.name}</h3>
-            <form id="edit-form">
-                <div class="form-group">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender">
-                        <option value="" ${member.gender === "" ? "selected" : ""}>Select Gender</option>
-                        <option value="Male" ${member.gender === "Male" ? "selected" : ""}>Male</option>
-                        <option value="Female" ${member.gender === "Female" ? "selected" : ""}>Female</option>
-                        <option value="Other" ${member.gender === "Other" ? "selected" : ""}>Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="location">Current Location:</label>
-                    <select id="location" name="location">
-                        <option value="" ${member.location === "" ? "selected" : ""}>Select Location</option>
-                        <option value="Overseas" ${member.location === "Overseas" ? "selected" : ""}>Overseas</option>
-                        <option value="India" ${member.location === "India" ? "selected" : ""}>India</option>
-                        <option value="Kerala" ${member.location === "Kerala" ? "selected" : ""}>Kerala</option>
-                        <option value="Kochi" ${member.location === "Kochi" ? "selected" : ""}>Kochi</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="contacted">Contacted:</label>
-                    <select id="contacted" name="contacted">
-                        <option value="" ${member.contacted === "" ? "selected" : ""}>Select</option>
-                        <option value="Yes" ${member.contacted === "Yes" ? "selected" : ""}>Yes</option>
-                        <option value="No" ${member.contacted === "No" ? "selected" : ""}>No</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="contactedBy">Contacted By:</label>
-                    <input type="text" id="contactedBy" name="contactedBy" value="${member.contactedBy}">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" value="${member.phone}">
-                </div>
-                <div class="form-group">
-                    <label for="availability">Availability:</label>
-                    <select id="availability" name="availability">
-                        <option value="" ${member.availability === "" ? "selected" : ""}>Select</option>
-                        <option value="Yes" ${member.availability === "Yes" ? "selected" : ""}>Yes</option>
-                        <option value="No" ${member.availability === "No" ? "selected" : ""}>No</option>
-                        <option value="Maybe" ${member.availability === "Maybe" ? "selected" : ""}>Maybe</option>
-                    </select>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="save-btn">Save</button>
-                    <button type="button" class="cancel-btn">Cancel</button>
-                </div>
-            </form>
-        </div>
-    `;
-    
-    // Add modal to the document
-    document.body.appendChild(modal);
-    
-    // Get form elements
-    const form = document.getElementById('edit-form');
-    const closeBtn = modal.querySelector('.close-btn');
-    const cancelBtn = modal.querySelector('.cancel-btn');
-    
-    // Close modal event
-    closeBtn.addEventListener('click', () => {
-        document.body.removeChild(modal);
-    });
-    
-    // Cancel button event
-    cancelBtn.addEventListener('click', () => {
-        document.body.removeChild(modal);
-    });
-    
-    // Close modal when clicking outside
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            document.body.removeChild(modal);
-        }
-    });
-    
-    // Form submit event
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Update member data
-        member.gender = document.getElementById('gender').value;
-        member.location = document.getElementById('location').value;
-        member.contacted = document.getElementById('contacted').value;
-        member.contactedBy = document.getElementById('contactedBy').value;
-        member.phone = document.getElementById('phone').value;
-        member.availability = document.getElementById('availability').value;
-        
-        // Save changes to Firebase
-        await saveMemberData(member, index);
-        
-        // Close modal
-        document.body.removeChild(modal);
-        
-        // Refresh display with current filters
-        applyFilters();
-    });
+// Initialize the roster
+async function initializeRoster() {
+    try {
+        console.log('Initializing roster...');
+        await displayRoster();
+        console.log('Roster initialization complete');
+    } catch (error) {
+        console.error('Error initializing roster:', error);
+    }
 }
 
 // Event Listeners
-searchInput.addEventListener('input', () => {
-    searchRoster(searchInput.value);
-});
-
-searchBtn.addEventListener('click', () => {
-    searchRoster(searchInput.value);
-});
-
-searchInput.addEventListener('keyup', (e) => {
-    if (e.key === 'Enter') {
+if (searchInput) {
+    searchInput.addEventListener('input', () => {
         searchRoster(searchInput.value);
-    }
-});
-
-sortButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        sortButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        currentSort = button.dataset.sort;
-        sortRoster(currentSort);
     });
-});
+}
+
+if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+        searchRoster(searchInput.value);
+    });
+}
+
+if (sortButtons.length > 0) {
+    sortButtons.forEach(button => {
+        button.addEventListener('click', async () => {
+            sortButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            currentSort = button.dataset.sort;
+            const members = await loadSavedData();
+            sortRoster(currentSort, members);
+        });
+    });
+}
 
 // Filter event listeners
-applyFiltersBtn.addEventListener('click', applyFilters);
+if (applyFiltersBtn) {
+    applyFiltersBtn.addEventListener('click', applyFilters);
+}
 
-resetFiltersBtn.addEventListener('click', resetFilters);
+if (resetFiltersBtn) {
+    resetFiltersBtn.addEventListener('click', resetFilters);
+}
 
 // Dark mode functionality
 function initDarkMode() {
@@ -413,8 +259,130 @@ function initDarkMode() {
     });
 }
 
-// Initialize dark mode when the page loads
+// Initialize when the page loads
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM Content Loaded');
     initDarkMode();
     initializeRoster();
-}); 
+});
+
+// Open edit modal for a member
+async function openEditModal(memberId) {
+    try {
+        console.log('Opening edit modal for member:', memberId);
+        const memberDoc = await db.collection('roster').doc(memberId).get();
+        
+        if (!memberDoc.exists) {
+            console.error('Member not found:', memberId);
+            return;
+        }
+
+        const member = memberDoc.data();
+        console.log('Member data:', member);
+
+        // Create modal HTML
+        const modalHTML = `
+            <div class="modal" id="edit-modal">
+                <div class="modal-content">
+                    <h2>Edit Member Details</h2>
+                    <form id="edit-form">
+                        <div class="form-group">
+                            <label for="edit-name">Name:</label>
+                            <input type="text" id="edit-name" value="${member.name || ''}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-gender">Gender:</label>
+                            <select id="edit-gender">
+                                <option value="">Select Gender</option>
+                                <option value="Male" ${member.gender === 'Male' ? 'selected' : ''}>Male</option>
+                                <option value="Female" ${member.gender === 'Female' ? 'selected' : ''}>Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-location">Location:</label>
+                            <input type="text" id="edit-location" value="${member.location || ''}">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-contacted">Contacted:</label>
+                            <select id="edit-contacted">
+                                <option value="">Select Status</option>
+                                <option value="Yes" ${member.contacted === 'Yes' ? 'selected' : ''}>Yes</option>
+                                <option value="No" ${member.contacted === 'No' ? 'selected' : ''}>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-contactedBy">Contacted By:</label>
+                            <input type="text" id="edit-contactedBy" value="${member.contactedBy || ''}">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-phone">Phone:</label>
+                            <input type="text" id="edit-phone" value="${member.phone || ''}">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-availability">Availability:</label>
+                            <select id="edit-availability">
+                                <option value="">Select Availability</option>
+                                <option value="Available" ${member.availability === 'Available' ? 'selected' : ''}>Available</option>
+                                <option value="Not Available" ${member.availability === 'Not Available' ? 'selected' : ''}>Not Available</option>
+                            </select>
+                        </div>
+                        <div class="modal-buttons">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" onclick="closeEditModal()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        `;
+
+        // Add modal to the page
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+        // Add form submit handler
+        const form = document.getElementById('edit-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await saveMemberData(memberId);
+        });
+
+        // Show modal
+        const modal = document.getElementById('edit-modal');
+        modal.style.display = 'block';
+    } catch (error) {
+        console.error('Error opening edit modal:', error);
+    }
+}
+
+// Close edit modal
+function closeEditModal() {
+    const modal = document.getElementById('edit-modal');
+    if (modal) {
+        modal.remove();
+    }
+}
+
+// Save member data
+async function saveMemberData(memberId) {
+    try {
+        const memberData = {
+            name: document.getElementById('edit-name').value,
+            gender: document.getElementById('edit-gender').value,
+            location: document.getElementById('edit-location').value,
+            contacted: document.getElementById('edit-contacted').value,
+            contactedBy: document.getElementById('edit-contactedBy').value,
+            phone: document.getElementById('edit-phone').value,
+            availability: document.getElementById('edit-availability').value
+        };
+
+        await db.collection('roster').doc(memberId).update(memberData);
+        console.log('Member data updated successfully:', memberId);
+        
+        // Refresh the roster display
+        await displayRoster();
+        
+        // Close the modal
+        closeEditModal();
+    } catch (error) {
+        console.error('Error saving member data:', error);
+    }
+} 
