@@ -300,7 +300,13 @@ async function openEditModal(memberId) {
                         </div>
                         <div class="form-group">
                             <label for="edit-location">Location:</label>
-                            <input type="text" id="edit-location" value="${member.location || ''}">
+                            <select id="edit-location">
+                                <option value="">Select Location</option>
+                                <option value="Overseas" ${member.location === 'Overseas' ? 'selected' : ''}>Overseas</option>
+                                <option value="India" ${member.location === 'India' ? 'selected' : ''}>India</option>
+                                <option value="Kerala" ${member.location === 'Kerala' ? 'selected' : ''}>Kerala</option>
+                                <option value="Kochi" ${member.location === 'Kochi' ? 'selected' : ''}>Kochi</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="edit-contacted">Contacted:</label>
